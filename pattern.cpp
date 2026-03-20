@@ -274,7 +274,7 @@ void pattern16(int num){
  12321
 1234321
 */
-void pattern19(int num){
+void pattern17(int num){
     for(int i=0;i<num;i++){
         for(int j=0;j<num-i-1;j++){
             cout<<" ";
@@ -295,7 +295,7 @@ void pattern19(int num){
 1********1
 */
 
-void pattern20(int num){
+void pattern18(int num){
     for(int i=0;i<num;i++){
         for(int j=0;j<num-i;j++){
             cout<<j+1;
@@ -309,27 +309,59 @@ void pattern20(int num){
         cout<<endl;
     }
 }
-
+/*
+111*111
+11***11
+111*111
+*/
+void pattern19(int num){
+    for(int i=0;i<num;i++){
+        if(i<=num/2){
+            for(int j=0;j<num-i;j++){
+                cout<<1;
+            }
+            for(int j=0;j<2*i+1;j++){
+                cout<<"*";
+            }
+            for(int j=0;j<num-i;j++){
+                cout<<1;
+            }
+        }
+        else{
+               for(int j=0;j<=i;j++){
+                cout<<1;
+            }
+            for(int j=0;j<2*(num-i)-1;j++){
+                cout<<"*";
+            }
+            for(int j=0;j<=i;j++){
+                cout<<1;
+            }
+        }
+        cout<<endl;
+    }
+}
 
 int main(){
     int num;
     cin>>num;
-    pattern1(num);
-    pattern2(num);
-    pattern3(num);
-    pattern4(num);
-    pattern5(num);
-    pattern6(num);
-    pattern7(num);
-    pattern8(num);
-    pattern9(num);
-    pattern10(num);
-    pattern11(num);
-    pattern12(num);
-    pattern13(num);
-    pattern14(num);
-    pattern15(num);
-    pattern16(num);
-
-
+    // pattern1(num);
+    // pattern2(num);
+    // pattern3(num);
+    // pattern4(num);
+    // pattern5(num);
+    // pattern6(num);
+    // pattern7(num);
+    // pattern8(num);
+    // pattern9(num);
+    // pattern10(num);
+    // pattern11(num);
+    // pattern12(num);
+    // pattern13(num);
+    // pattern14(num);
+    // pattern15(num);
+    // pattern16(num);
+    // pattern17(num);
+    // pattern18(num);
+    pattern19(num);
 }
